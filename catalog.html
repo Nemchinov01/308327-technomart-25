@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Техномарт-каталог</title>
+    <title>Каталог товаров интернет-магазин «Техномарт»</title>
 </head>
 
 <body>
@@ -14,7 +14,9 @@
             </a>
             <ul class="main-header-order-list">
                 <li>
-                    <span>Поиск</span>
+                    <p>Поиск:
+                        <input type="search">
+                    </p>
                 </li>
                 <li class="main-header-order-item">
                     <a href="#">Закладки</a>
@@ -90,24 +92,55 @@
         </ul>
         <h1 class="page-title">Перфораторы</h1>
         <section class="page-filters">
-            <fieldset>
-                <legend>Производители:</legend>
-                    <ul>
-                        <li>Bosch</li>
-                        <li>Интерскол</li>
-                        <li>Makita</li>
-                        <li>Dewalt</li>
-                        <li>Hitachi</li>
-                    </ul>
-            </fieldset>
-            <fieldset>
-                <legend>Питание:</legend>
-                    <ul>
-                        <li>Аккумуляторные</li>
-                        <li>Сетевые</li>
-                    </ul>
-            </fieldset>
-            <button type="submit" class="filters-btn">Показать</button>
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <form action="https:#" method="GET">
+                <fieldset>
+                    <legend>Производители:</legend>
+                        <ul>
+                            <li class="page-filters-item">
+                                <label>
+                                    <input type="checkbox" name="Bosch" checked> Bosch
+                                </label>
+                            </li>
+                            <li class="page-filters-item">
+                                <label>
+                                    <input type="checkbox" name="Interscol">Интерскол
+                                </label>
+                            </li>
+                            <li class="page-filters-item">
+                                <label>
+                                    <input type="checkbox" name="Makita" checked>Makita
+                                </label>
+                            </li>
+                            <li class="page-filters-item">
+                                <label>
+                                    <input type="checkbox" name="Dewalt">Dewalt
+                                </label>
+                            </li>
+                            <li class="page-filters-item">
+                                <label>
+                                    <input type="checkbox" name="Hitachi">Hitachi
+                                </label>
+                            </li>
+                        </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Питание:</legend>
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="Power" value="Batery-power"> Аккумуляторные
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="Power" value="AC-power"> Сетевые
+                                </label>
+                            </li>
+                        </ul>
+                </fieldset>
+                <button type="submit" class="filters-btn">Показать</button>
+            </form>
         </section>
 
         <section class="page-catalog">
@@ -191,6 +224,20 @@
                         <button type="submit" class="page-catalog-btn">В закладки</button>
                 </li>
             </ul>
+        </section>
+
+        <!-- Форма добавления в корзину -->
+        <section>
+            <h1 class="visually-hidden">Форма добавления в корзину!</h1>
+            <form action="https:#" method="get">
+                <div>
+                    <img src="img/form-modal.png" alt="Подтверждение добавления товара">
+                </div>
+                <h2>Товар добавлен в корзину!</h2>
+                <button type="submit">Оформить заказ</button> 
+                <a href="#">Продолжить покупки</a>
+            </form>
+            <button class="modal-close" type="button">Закрыть</button>
         </section>
     </main>
                             <!-- Здесь заканчивается Main -->

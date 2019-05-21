@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Техномарт</title>
+    <title>Интернет-магазин «Техномарт»</title>
 </head>
 
 <body>
@@ -14,7 +14,11 @@
             </a>
             <ul class="main-header-order-list">
                 <li>
-                    <span>Поиск</span>
+                    <label>
+                        <p>Поиск:
+                            <input type="search">
+                        </p>
+                    </label>
                 </li>
                 <li class="main-header-order-item">
                     <a href="#">Закладки</a>
@@ -97,6 +101,40 @@
             <img src="img/map.jpg" width="300" height="158" alt="На карте Большая Конюшенная ул., 19"><br>
             <a class="btn-site-contacts" href="#">Заблудились? Напишите нам!</a>
         </section>
+
+            <!-- Модальное окно с картой -->
+        <section class="modal modal-map">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <div class="container-modal-map">
+                <button class="modal-close" type="button">Закрыть</button><br>
+                <img src="img\popup-map.jpg" width="940" height="447" alt="На карте Большая Конюшенная ул., 19">
+            </div>
+        </section>
+
+            <!-- Форма обратной связи -->
+        <section class="modal modal-write">
+                <h2 class="visually-hidden">Напишите нам.</h2>
+                <button class="modal-close" type="button">Закрыть</button>
+                <div class="container-modal-write">
+                    <form action="https:#" method="post">
+                        <label>
+                            <p>Ваше имя:</p>
+                            <input type="text" name="Name" placeholder="Имя Фамилия">
+                        </label>
+                        <label>
+                            <p>Ваше e-mail:</p>
+                            <input type="email" name="E-mail" placeholder="email.example.com">
+                        </label>
+                        <label>
+                            <p>Текст письма:</p>
+                            <textarea name="comment" placeholder="В свободной форме" rows="10">
+                            </textarea><br>                             
+                        </label>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+                
+            </section>
     </main>
 
     <footer class="main-footer">
