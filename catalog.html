@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Каталог товаров интернет-магазин «Техномарт»</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="normalize\normalize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,9 +18,11 @@
             </a>
             <ul class="main-header-order-list">
                 <li>
-                    <p>Поиск:
-                        <input type="search">
-                    </p>
+                    <label>
+                        <p>Поиск:
+                            <input type="search">
+                        </p>
+                    </label>
                 </li>
                 <li class="main-header-order-item">
                     <a href="#">Закладки</a>
@@ -36,7 +42,7 @@
             </div>
             <div class="site-phone">
                     <a href="tel: +78125550555">+7 (812) 555-05-55</a>
-                <address>г.Санкт-Петербург, ул. Б.Конюшенная, д.19/8</address>
+                <address class="site-address">г.Санкт-Петербург, ул. Б.Конюшенная, д.19/8</address>
             </div>
 
             <section class="user-window">
@@ -92,11 +98,11 @@
         </ul>
         <h1 class="page-title">Перфораторы</h1>
         <section class="page-filters">
-            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <h2 class="vissually-hidden">Фильтр товаров</h2>
             <form action="https:#" method="GET">
                 <fieldset>
-                    <legend>Производители:</legend>
-                        <ul>
+                    <legend class="filter-manufacturers">Производители:</legend>
+                        <ul class="page-filters-list">
                             <li class="page-filters-item">
                                 <label>
                                     <input type="checkbox" name="Bosch" checked> Bosch
@@ -125,8 +131,8 @@
                         </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>Питание:</legend>
-                        <ul>
+                    <legend class="filter-power">Питание:</legend>
+                        <ul class="page-filters-list">
                             <li>
                                 <label>
                                     <input type="radio" name="Power" value="Batery-power"> Аккумуляторные
@@ -267,9 +273,9 @@
 
         <div class="main-footer-social">
             <ul class="main-footer-social-list">
-                <li><a href="" class="social-button"></a>Вконтакте</li>
-                <li><a href="" class="social-button"></a>Фейсбук</li>
-                <li><a href="" class="social-button"></a>Инстаграмм</li>
+                <li><a href="#" class="social-button" aria-label="Вконтакте"></a>ВК</li>
+                <li><a href="#" class="social-button" aria-label="Фейсбук"></a>Фейсбук</li>
+                <li><a href="#" class="social-button" aria-label="Инстаграмм"></a>Инстаграмм</li>
             </ul>
         </div>
 
