@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.vissually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect (0 0 0 0);
+    overflow: hidden;
+}
+
+
+                /* Стили для хедера */
+
+.main-header-order {
+    background-color: #293449;
+    width: 100%;
+}
+
+.main-header-order-list {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+.main-header-order-item a{
+    color: #ffffff;
+}
+
+.main-header-order-item:last-child{
+    background-color: #63a63e;
+}
+
+.site-description {
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
+    font-style: italic;
+    width: 200px;
+}
+
+.site-phone a{
+    color: #ee3643;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.site-address {
+    font-style: inherit;
+    color: #32425c;
+    font-size: 14px;
+}
+
+.user-navigation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.user-navigation-login a,
+.user-navigation-signin a {
+    color: #000000;
+    font-size: 21px;
+}
+
+.site-navigation {
+    background-color: #32425c;
+    border-bottom: #293449 solid 5px;
+}
+
+.site-navigation-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.site-navigation-item a {
+    font-size: 17px;
+    color: #ffffff;
+}
+
+
+                /* Стили main-company */
+.site-title {
+    font: 30px;
+    text-transform: uppercase;
+}
+
+.description-about-company,
+.description-contacts {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.button {
+    height: 38px;
+    width: 300px;
+    font-size: 14px;
+    background-color: #ee3643;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.btn-about-company {
+    width: 220px;  
+}
+
+
+            /* Стили для футер */
+.main-footer {
+    background-color: #32425c;
+}
+
+.main-footer-down {
+    background-color: #293449;
+}
+
+.main-footer-navigation-list,
+.main-footer-shop-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-footer-navigation-item a {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-address,
+.footer-phone {
+    font-style: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    color: #f3f7f9;
+}
+
+.main-footer-shop-item a {
+    font-size: 18px;
+    color: #ffd180;
+}  
+
+.main-footer-copyright {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.main-footer-social-list {
+    padding: 0;
+    list-style: none;
+}
+
+.social-item {
+    display: inline-block;
+    background-color: #212a3a;
+    height: 42px;
+    width:42px;
+    border-radius: 50%;
+}
+
+.social-item a {
+    display: block;
+    height: 42px;
+    width:42px;
+}
+
+.social-button {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-button-vk {
+    background-image: url(img/icon-vk.svg);
+}
+
+.social-button-fb {
+    background-image: url(img/icon-fb.svg);
+}
+
+.social-button-insta {
+    background-image: url(img/icon-insta.svg);
+}
+
+.feedback {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.feedback a {
+    color: #ffd180;
+}
+
+                                /* Стили для Catalog */
+.user-name {
+    font-size: 21px;
+}
+
+.user-name-item:first-child {
+    list-style: none;
+
+}
+
+.user-name-item a{
+    text-decoration: underline;
+    color: #32425c;
+    font-size: 16px;
+}
+
+.breadcrumbs {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 0;
+    list-style: none;
+}
+
+.breadcrumbs a {
+    color: #000000;
+}
+
+.page-title {
+    font-size: 30px;
+    color: #32425c;
+    text-transform: uppercase;
+}
+
+.page-filters-list {
+    list-style: none;
+}
+
+.filters-btn {
+    width: 140px;
+    height: 38px;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
