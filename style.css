@@ -728,17 +728,18 @@ fieldset {
     justify-content: space-between;  
 }
 
-.breadcrumbs-item:first-child {
-    position: relative;
-}
-
-.breadcrumbs-home::before {
-    content: " ";
+.breadcrumbs-home {
+    display: block;
     width: 15px;
     height: 12px;
-    position: absolute;
-    left: 0;
     background-image: url(img/icon-home.svg);
+    background-repeat: no-repeat;
+}
+
+.breadcrumbs-item:nth-child(2n) {
+    width: 8px;
+    height: 12px;
+    background-image: url(img/icon-right-small.svg);
     background-repeat: no-repeat;
 }
 
