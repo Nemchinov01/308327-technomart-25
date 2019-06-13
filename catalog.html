@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="normalize/normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
 </head>
 
 <body>
@@ -23,15 +23,12 @@
                     </div>
                     <ul class="main-header-order-list">
                         <li class="main-header-order-item">
-                            <div class="container-order-search">
-                                <form action="#" method="get">
-                                    <label>
-                                        <button class="order-button vissually-hidden" type="submit" value="Подтверждение поиска">Поиск</button>
-                                        <span class="order-button-image"></span>
-                                    </label>                                       
+                            <form class="form-products" action="#" method="get">
+                                <div class="product-search">
                                     <input type="search" name="search" placeholder="Поиск:" >
-                                </form>
-                            </div>
+                                    <button class="product-search-btn" type="submit" value="Подтверждение поиска">Поиск</button>
+                                </div>
+                            </form>
                         </li>
                         <li class="main-header-order-item">
                             <a class="order-bookmark" href="#">
@@ -146,32 +143,37 @@
                                 <ul class="filters-list-manufacturers">
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="checkbox" name="Bosch" checked> Bosch
+                                            <input class="vissually-hidden" type="checkbox" name="Bosch" checked>
                                             <span class="checkbox"></span>
+                                            <b>Bosch</b>
                                         </label>
                                     </li>
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="checkbox" name="Interscol">Интерскол
+                                            <input class="vissually-hidden" type="checkbox" name="Interscol">
                                             <span class="checkbox"></span>
+                                            <b>Интерскол</b>
                                         </label>
                                     </li>
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="checkbox" name="Makita" checked>Makita
+                                            <input class="vissually-hidden" type="checkbox" name="Makita" checked>
                                             <span class="checkbox"></span>
+                                            <b>Makita</b>
                                         </label>
                                     </li>
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="checkbox" name="Dewalt">Dewalt
+                                            <input class="vissually-hidden" type="checkbox" name="Dewalt">
                                             <span class="checkbox"></span>
+                                            <b>Dewalt</b>
                                         </label>
                                     </li>
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="checkbox" name="Hitachi">Hitachi
+                                            <input class="vissually-hidden" type="checkbox" name="Hitachi">
                                             <span class="checkbox"></span>
+                                            <b>Hitachi</b>
                                         </label>
                                     </li>
                                 </ul>
@@ -181,14 +183,16 @@
                                 <ul class="filters-list-power">
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="radio" name="Power" value="Batery-power"> Аккумуляторные
+                                            <input class="vissually-hidden" type="radio" name="Power" value="Batery-power">
                                             <span class="radio"></span>
+                                            <b>Аккумуляторные</b>
                                         </label>
                                     </li>
                                     <li class="page-filters-item">
                                         <label class="label-filters">
-                                            <input class="vissually-hidden" type="radio" name="Power" value="AC-power"> Сетевые
+                                            <input class="vissually-hidden" type="radio" name="Power" value="AC-power">
                                             <span class="radio"></span>
+                                            <b>Сетевые</b>
                                         </label>
                                     </li>
                                 </ul>
@@ -306,18 +310,22 @@
             </section>
     
             <!-- Форма добавления в корзину -->
-            <!-- <section>
-                <h1 class="vissually-hidden">Форма добавления в корзину!</h1>
-                <form action="https:" method="get">
-                    <div>
-                        <img src="img/form-modal.png" alt="Подтверждение добавления товара">
-                    </div>
-                    <h2>Товар добавлен в корзину!</h2>
-                    <button type="submit">Оформить заказ</button> 
-                    <a href="#">Продолжить покупки</a>
-                </form>
-                <button class="modal-close" type="button" value="Кнопка закрытия формы">Закрыть</button>
-            </section> -->
+            <div class="container-catalog-modal">
+                <section class="catalog-modal">
+                    <h1 class="vissually-hidden">Форма добавления в корзину!</h1>
+                    <form action="#" method="get">
+                        <div class="catalog-modal-confirm">
+                            <img src="img/form-modal.png" alt="Подтверждение добавления товара">
+                            <h2>Товар добавлен в корзину!</h2>
+                        </div>
+                        <div class="catalog-modal-btns">
+                            <button class="modal-order-btn" type="submit">Оформить заказ</button> 
+                            <a class="modal-shoping-btn" href="#">Продолжить покупки</a>
+                        </div>
+                    </form>
+                    <button class="modal-close" type="button" value="Кнопка закрытия формы">Закрыть</button>
+                </section>
+            </div>
         </div>
     </main>
                             <!-- Здесь заканчивается Main -->
@@ -327,7 +335,9 @@
             <div class="container-wrapper">
                 <div class="container-navigation-list">
                     <div>
-                        <img src="img/logo-footer.png" width="220" height="68" alt="Логотип Техномарт">
+                        <a href="index.html">
+                            <img src="img/logo-footer.png" width="220" height="68" alt="Логотип Техномарт">
+                        </a>
                     </div> 
                     <ul class="main-footer-navigation-list">
                         <li class="main-footer-navigation-item">
