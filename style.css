@@ -467,7 +467,6 @@ a {
                                 /* Стили для modal-write */
 
 .container-modal-write {
-    display: none;
     position: fixed;
     top: 50px;
     bottom: 200px;
@@ -563,7 +562,6 @@ a {
     position: fixed;
     top: 10%;
     box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
-    display: none;
 }
 
 .container-modal-map {
@@ -1153,7 +1151,6 @@ a {
                                          /* Стили для Catalog-modal */
 
 .container-catalog-modal {
-    display: none;
     position: fixed;
     top: 369px;
     left: 50%;
