@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="normalize/normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
 </head>
 
 <body>
@@ -23,15 +23,12 @@
                     </div>
                     <ul class="main-header-order-list">
                         <li class="main-header-order-item">
-                            <div class="container-order-search">
-                                <form action="#" method="get">
-                                    <label>
-                                        <button class="order-button vissually-hidden" type="submit" value="Подтверждение поиска">Поиск</button>
-                                        <span class="order-button-image"></span>
-                                    </label>                                       
+                            <form class="form-products" action="#" method="get">
+                                <div class="product-search">
                                     <input type="search" name="search" placeholder="Поиск:" >
-                                </form>
-                            </div>
+                                    <button class="product-search-btn" type="submit" value="Подтверждение поиска">Поиск</button>
+                                </div>
+                            </form>
                         </li>
                         <li class="main-header-order-item">
                             <a class="order-bookmark" href="#">
@@ -137,37 +134,44 @@
                 </a>
                 <a class="btn-site-contacts" href="#">Заблудились? Напишите нам!</a>
             </section>
-        </section>
 
-            <!-- Модальное окно с картой -->
-        <section class="modal modal-map">
-            <h2 class="vissually-hidden">Как до нас добраться</h2>
-            <div class="container-modal-map">
-                <img src="img/popup-map.jpg" width="940" height="447" alt="На карте Большая Конюшенная ул., 19">
-                <button class="modal-close" type="button">Закрыть</button>
+                    <!-- Модальное окно с картой -->
+
+            <section class="modal-map">
+                <h2 class="vissually-hidden">Как до нас добраться</h2>
+                <div class="container-modal-map">
+                    <img src="img/popup-map.jpg" width="940" height="447" alt="На карте Большая Конюшенная ул., 19">
+                    <button class="modal-close" type="button">Закрыть</button>
+                </div>
+            </section>
+
+                    <!-- Форма обратной связи -->
+    
+            <div class="container-modal-write">
+                <section class="modal-write">
+                    <h2 class="vissually-hidden">Напишите нам.</h2>
+                    <form class="modal-feedback" action="https://echo.htmlacademy" method="post">
+                        <div class="container-modal-feedback">
+                            <label class="label-modal-write">
+                                <b>Ваше имя:</b>
+                                <input type="text" name="Name" placeholder="Имя Фамилия">
+                            </label>
+                            <label class="label-modal-write">
+                                <b>Ваш e-mail:</b>
+                                <input type="email" name="E-mail" placeholder="email.example.com">
+                            </label>
+                            <label class="label-modal-write">
+                                <b>Текст письма:</b>
+                                <textarea placeholder="В свободной форме" name="comment"></textarea>                          
+                            </label>
+                        </div>
+                        <div class="modal-write-container-btn">
+                            <button class="modal-write-btn" type="submit" value="Кнопка отправки формы">Отправить</button>
+                        </div>
+                    </form>                
+                        <button class="modal-close" type="button" value="Кнопка закрытия формы">Закрыть</button>
+                </section>
             </div>
-        </section>
-
-            <!-- Форма обратной связи -->
-        <section class="modal modal-write">
-            <h2 class="vissually-hidden">Напишите нам.</h2>
-            <form class="container-modal-feedback" action="https://echo.htmlacademy" method="post">
-                <label>
-                    <b> Ваше имя:</b>
-                    <input type="text" name="Name" placeholder="Имя Фамилия">
-                </label>
-                <label>
-                    <b>Ваше e-mail:</b>
-                    <input type="email" name="E-mail" placeholder="email.example.com">
-                </label>
-                <label>
-                    <b>Текст письма:</b>
-                    <textarea name="comment" placeholder="В свободной форме" rows="10">
-                    </textarea><br>                             
-                </label>
-                <button type="submit">Отправить</button>
-                <button class="modal-close" type="button" value="Кнопка закрытия формы">Закрыть</button>
-            </form>                
         </section>
     </main>
 
@@ -175,9 +179,9 @@
         <section class="main-footer-up">
             <div class="container-wrapper">
                 <div class="container-navigation-list">
-                    <div>
+                    <a href="index.html">
                         <img src="img/logo-footer.png" width="220" height="68" alt="Логотип Техномарт">
-                    </div> 
+                    </a>
                     <ul class="main-footer-navigation-list">
                         <li class="main-footer-navigation-item">
                             <a href="#">Компания</a>

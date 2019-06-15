@@ -81,56 +81,58 @@ a {
     background-repeat: no-repeat;
 }
 
-.container-order-search {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 30px;
+.form-products {
+    height: 100%;
+}
+
+.product-search {
+    height: 100%;
     position: relative;
 }
 
-.order-button-image {
-    position: absolute;
-    top: 0px;
-    left: 0;
+.product-search-btn {
+    border: none;
+    padding: 0;
+    font-size: 0;
+    top: 12px;
+    left: 17px;
     width: 17px;
     height: 17px;
     cursor: pointer;
+    background-color: transparent;
     background-image: url(img/icon-search.svg);
-    background-repeat: no-repeat;
-    opacity: 0.3;
+    position: absolute;
+
 }
 
-.order-button-image:hover {
-    opacity: 1;
+.form-products input[type="search"]:focus + .product-search-btn {
+    background-image: url(img/icon-search-red.svg);
 }
 
-.order-button-image:active {
-    opacity: 0.3;
-}
-
-.order-button:focus + .order-button-image   {
-    border-color: #663d15;
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    opacity: 1;
-}
-
-.container-order input[type="search"] {
+.form-products input[type="search"] {
     border: none;
     padding: 0;
-    background: none;    
+    padding-left: 49px;
+    background: none;
+    height: 100%;
+    width: 270px; 
+    color: #ffffff;
 }
 
-.container-order input[type="search"]::-webkit-input-placeholder {
+.form-products input[type="search"]:focus {
+    color: #000000;
+}
+
+.form-products input[type="search"]::-webkit-input-placeholder {
     font-size: 17px;
     color: #ffffff;
 }   
 
-.container-order input[type="search"]::-webkit-search-cancel-button { 
+.form-products input[type="search"]::-webkit-search-cancel-button { 
     -webkit-appearance: none;
 }
 
-.container-order-search input[type="search"]:focus {
+.form-products input[type="search"]:focus {
     background-color: #ffffff;
 }
 
@@ -146,11 +148,8 @@ a {
 .main-header-order-item:first-child {
     margin-right: auto; 
     width: 270px;
+    padding: 0;
 }
-
-.main-header-order-item:first-child:focus {
-    background-color: #ffffff;
-} 
 
 .main-header-order-item {
     padding: 12px 22px 10px 20px;
@@ -213,8 +212,6 @@ a {
 .order-bookmark:hover:active::before {
     opacity: 0.3;
 }
-
-
 
 .main-header-order-item:last-child{
     background-color: #63a63e;
@@ -349,7 +346,7 @@ a {
 .site-navigation {
     width: 100%;
     background-color: #32425c;
-    border-bottom: #293449 solid 5px;
+    box-shadow: inset 0 -5px 0 -1px #293449;
 }
 
 .site-navigation-list {
@@ -384,11 +381,13 @@ a {
     opacity: 0.5;
 }
 
-                /* Стили main-company */
+                                                 /* Стили main-company */
+
 .info-about-us {
     display: flex;
     justify-content: space-between;
     padding: 77px 0 86px;
+    position: relative;
 }
 
 .site-about-company {
@@ -435,8 +434,6 @@ a {
     margin: 35px 0 36px;     
 }
 
-
-
 .btn-about-company,
 .btn-site-contacts {
     display: block;
@@ -457,8 +454,122 @@ a {
     width: 300px;
 }
 
+.btn-about-company:hover,
+.btn-site-contacts:hover {
+    background-color: #ca2c37;
+}
 
-            /* Стили для футер */
+.btn-about-company:active,
+.btn-site-contacts:active {
+    background-color: #ba2732;
+}
+
+                                /* Стили для modal-write */
+
+.container-modal-write {
+    position: fixed;
+    top: 50px;
+    bottom: 200px;
+    left: 50%;
+
+    margin-left: -310px;
+}
+
+.modal-write {
+    width: 620px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75),
+                inset 0 8px 1px -1px #ee3643;
+    position: relative;
+}
+
+.modal-feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-modal-feedback {
+    padding: 55px 80px 37px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.label-modal-write {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-modal-write:nth-child(3) {
+    flex-grow: 1;
+}
+
+.label-modal-write b {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.label-modal-write input,
+.label-modal-write textarea {
+    padding: 9px 0 11px 13px;;
+    margin-top: 12px;
+    border: 2px solid #dee3e4;
+    border-radius: 3px;
+    resize: none;
+}
+
+.label-modal-write input::placeholder,
+.label-modal-write textarea::placeholder {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    color: #a9a9a9;
+}
+
+.modal-write-container-btn {
+    width: 100%;
+    padding: 37px 80px;
+    background-color: #f4f4f4;
+}
+
+.modal-write-btn {
+    width: 100%;
+    border: none;
+    background-color: #ee3643;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 11px 0 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.modal-close {
+    width: 21px;
+    height: 21px;
+    top: 9px;
+    right: 9px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 0;
+    position: absolute;
+    background-image: url(img/icon-close-red.svg);
+}
+
+                                /* Стили для modal-map */
+
+.modal-map {
+    position: fixed;
+    top: 10%;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+}
+
+.container-modal-map {
+    height: 447px;
+}
+
+                                            /* Стили для футер */
+
 .main-footer {
     background-color: #32425c;
 }
@@ -619,7 +730,9 @@ a {
 }
 
 
-                                /* Стили для Catalog */
+                                                /* Стили для Catalog */
+
+
 .user-name {
     font-size: 21px;
     position: relative;
@@ -724,7 +837,8 @@ a {
     list-style: none;
     display: flex;
     width: 360px;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .breadcrumbs-home {
@@ -793,7 +907,12 @@ a {
 .label-filters {
     position: relative;
     padding-left: 35px;
+    padding-top: 2px; 
     cursor: pointer;
+}
+
+.label-filters b {
+    font-weight: normal;
 }
 
 .label-filters input[type="checkbox"] + .checkbox {
@@ -803,8 +922,7 @@ a {
     width: 23px;
     height: 23px;
     background-image: url(img/checkbox-off.svg);
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;    
 }
 
 .label-filters input[type="checkbox"]:checked + .checkbox {
@@ -814,6 +932,16 @@ a {
     width: 27px;
     height: 23px;
     background-image: url(img/checkbox-on.svg);
+    background-repeat: no-repeat;
+}
+
+.label-filters input[type="checkbox"]:checked:hover + .checkbox {
+    background-image: url(img/checkbox-on-hover.svg);
+    background-repeat: no-repeat;
+}
+
+.label-filters input[type="checkbox"]:hover + .checkbox {
+    background-image: url(img/checkbox-off-hover.svg);
     background-repeat: no-repeat;
 }
 
@@ -831,8 +959,7 @@ a {
     width: 25px;
     height: 25px;
     background-image: url(img/radio-off.svg);
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;    
 }
 
 .label-filters input[type="radio"]:checked + .radio {
@@ -842,6 +969,16 @@ a {
     width: 25px;
     height: 25px;
     background-image: url(img/radio-on.svg);
+    background-repeat: no-repeat;
+}
+
+.label-filters input[type="radio"] + .radio {
+    background-image: url(img/radio-off-hover.svg);
+    background-repeat: no-repeat;    
+}
+
+.label-filters input[type="radio"]:checked + .radio {
+    background-image: url(img/radio-on-hover.svg);
     background-repeat: no-repeat;
 }
 
@@ -894,7 +1031,7 @@ a {
 }
 
 .catalog-item-firm {
-    margin: 0;
+    margin-top: 10px;
     margin-bottom: 17px;
     font-weight: bold;
     font-size: 18px;
@@ -1008,4 +1145,75 @@ a {
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 2px;
+    cursor: pointer;
+}
+
+                                         /* Стили для Catalog-modal */
+
+.container-catalog-modal {
+    position: fixed;
+    top: 369px;
+    left: 50%;
+
+    margin-left: -310px;
+    z-index: 1;
+}
+
+.catalog-modal {    
+    width: 620px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+    border-top: 7px solid #ee3643;
+    position: relative;
+}  
+
+.catalog-modal-confirm {
+    display: flex;
+    padding: 55px 80px 0;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.catalog-modal-confirm h2 {
+    font-size: 30px;
+    margin: 0;
+    margin-right: 44px;
+}
+
+.catalog-modal-btns {
+    margin-top: 48px;
+    padding: 37px 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+}
+
+.modal-order-btn {
+    width: 220px;
+    border: none;
+    background-color: #ee3643;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 11px 0 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.modal-order-btn:hover {
+    background-color: #ca2c37;
+}
+
+.modal-order-btn:active {
+    background-color: #ba2732;
+}
+
+.modal-shoping-btn {
+    background-color: #ffffff;
+    width: 220px;
+    color: #000000;
+    font-size: 14px;
+    padding: 11px 0 12px;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
 }
