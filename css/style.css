@@ -741,6 +741,25 @@ a {
     justify-content: space-around;
 }
 
+.popular-manufacturers-item:nth-child(2) a,
+.popular-manufacturers-item:nth-child(3) a {
+    padding-bottom: 4px;
+}
+
+.popular-manufacturers-item:nth-child(4) a {
+    padding-bottom: 13px;
+}
+
+.popular-manufacturers-item:nth-child(5) a {
+    padding-top: 1px;
+    padding-left: 4px;
+}
+
+.popular-manufacturers-item:nth-child(8) a {
+    padding-left: 2px;
+    padding-bottom: 6px;
+}
+
 .popular-manufacturers-item:hover {
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5); 
 }
@@ -779,7 +798,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 99px;    
+    padding-bottom: 99px; 
 }
 
 .services-list {
@@ -816,6 +835,17 @@ a {
     box-shadow: inset 0 1px 0 1px #405069;
 }
 
+.services-item .delivery-link {
+    color: #32425c;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+.services-item .delivery-link:hover {
+    background-color: transparent;
+}
+
 .container-service-dl {
     width: 620px;
     position: relative;
@@ -823,23 +853,9 @@ a {
 
 .description-services-list {
     margin: 0;
-    min-height: 100%;
     width: 100%;
-    position: absolute;
     top: 0;
     background-color: #f4f8f9;
-}
-
-.delivery {
-    z-index: 1;
-}
-
-.guarantee {
-    z-index: 2;
-}
-
-.credit {
-    z-index: 3;
 }
 
 .description-services-list:before {
@@ -861,18 +877,24 @@ a {
 }
 
 .term-list {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
     font-size: 36px;
     line-height: 30px;
     text-transform: uppercase;
     color: #32425c;
+    letter-spacing: 0.5px;
 }
 
 .term-item {
     margin: 0;
+    padding-bottom: 25px;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
+}
+
+.guarantee .term-item {
+    padding: 0;
 }
 
 .delivery-term,
@@ -893,7 +915,6 @@ a {
     background-color: #ffffff;
     border-bottom: 1px solid #ffffff;
     box-shadow: none;
-    outline: none;
 }
 
 .send-application {
@@ -903,7 +924,6 @@ a {
 .application-btn {
     display: block;
     padding: 10px 0;
-    margin-top: 25px;
     width: 195px;
     font-size: 14px;
     text-align: center;
@@ -1361,13 +1381,7 @@ a {
 }
 
 .user-name-id:hover::before {
-    content: " ";
-    position: absolute;
-    width: 20px;
-    height: 18px;
-    left: 15px;
     background-image: url(../img/icon-user-dark.svg);
-    background-repeat: no-repeat;
 }
 
 .user-name-id:active::before {
@@ -1385,13 +1399,7 @@ a {
 }
 
 .logout-user:hover {
-    position: absolute;
-    width: 20px;
-    height: 17px;
-    top: 14px;
-    right: 10px;
     background-image: url(../img/icon-logout-dark.svg);
-    background-repeat: no-repeat;
 }
 
 .logout-user:active {
@@ -1445,13 +1453,15 @@ a {
 }
 
 .user-menu-item a:hover,
-.user-menu-item a::after:hover {
+.user-menu-item a:hover::after {
     color: #ee3643;
+    border-color: #ee3643;
 }
 
 .user-menu-item a:active,
-.user-menu-item a::after:hover {
+.user-menu-item a:active::after {
     color: #c5c5c5;
+    border-color: #c5c5c5;
 }
 
 .breadcrumbs {
@@ -1594,18 +1604,28 @@ a {
     padding-bottom: 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-bottom: 1px solid #e5e5e5;
+    position: relative;
 }
 
 .price-controls input[type="text"] {
     width: 95px;
-    padding-top: 9px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 11px;
     text-align: center;
     border: none;
     background-color: #f7f3ec;
     border-radius: 5px;
+}
+
+.min-price {
+    padding-left: 4px;
+}
+
+.price-controls span {
+    position: absolute;
+    top: 8px;
+    left: 104px;
 }
 
 .page-filters .manufacturers {
@@ -1629,14 +1649,14 @@ a {
 }
 
 .sortting-wrapper {
-    width: 440px;
+    width: 442px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .sorting-list {
-    width: 352px;    
+    width: 355px;    
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1673,21 +1693,25 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-top: 1px;
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
 
 .sorting--item {
-    width: 0;
-    height: 0;
+    display: flex;
+    width: 11px;   
+}
+
+.sorting--item-top,
+.sorting--item-down {
     border-left: 5.5px solid transparent;
-    border-right: 5.5px solid transparent; 
-    cursor: pointer;   
+    border-right: 5.5px solid transparent;          
 }
 
 .sorting--item-top {
-    border-bottom: 10px solid#ee3643;      
+    border-bottom: 10px solid#ee3643;
 }
 
 .sorting--item-top:hover {
@@ -1749,10 +1773,13 @@ a {
 }
 
 .label-filters b {
+    padding-top: 3px;
     font-weight: normal;
+    letter-spacing: 0.2px;
 }
 
-.label-filters input[type="checkbox"] + .checkbox {
+.label-filters input[type="checkbox"] + .checkbox::before {
+    content: " ";
     position: absolute;
     top: 0;
     left: 0;
@@ -1762,7 +1789,8 @@ a {
     background-repeat: no-repeat;    
 }
 
-.label-filters input[type="checkbox"]:checked + .checkbox {
+.label-filters input[type="checkbox"]:checked + .checkbox::after {
+    content: " ";
     position: absolute;
     top: 0;
     left: 0;
@@ -1772,32 +1800,31 @@ a {
     background-repeat: no-repeat;
 }
 
-.label-filters input[type="checkbox"]:checked:disabled + .checkbox,
-.label-filters input[type="checkbox"]:checked:disabled:hover + .checkbox {
+.label-filters input[type="checkbox"]:checked:disabled + .checkbox::after,
+.label-filters input[type="checkbox"]:checked:disabled:hover + .checkbox::after {
     background-image: url(../img/checkbox-on.svg);
-    opacity: 0.3;
 }
 
-.label-filters input[type="checkbox"]:disabled + .checkbox,
-.label-filters input[type="checkbox"]:disabled:hover + .checkbox {
+.label-filters input[type="checkbox"]:disabled + .checkbox::before,
+.label-filters input[type="checkbox"]:disabled:hover + .checkbox::before {
     background-image: url(../img/checkbox-off.svg);
-    opacity: 0.3;
 }
 
-.label-filters input[type="checkbox"]:checked:disabled + .checkbox + b,
-.label-filters input[type="checkbox"]:disabled + .checkbox + b {
+.label-filters input[type="checkbox"]:checked:disabled + .checkbox,
+.label-filters input[type="checkbox"]:disabled + .checkbox {
     opacity: 0.4;
 }
 
-.label-filters input[type="checkbox"]:checked + .checkbox:hover {
+.label-filters input[type="checkbox"]:checked + .checkbox:hover::after {
     background-image: url(../img/checkbox-on-hover.svg);
 }
 
-.label-filters input[type="checkbox"] + .checkbox:hover {
+.label-filters input[type="checkbox"] + .checkbox:hover::before {
     background-image: url(../img/checkbox-off-hover.svg);
 }
 
-.label-filters input[type="radio"] + .radio {
+.label-filters input[type="radio"] + .radio::before {
+    content: " ";
     position: absolute;
     top: 0;
     left: 0;
@@ -1807,7 +1834,8 @@ a {
     background-repeat: no-repeat;    
 }
 
-.label-filters input[type="radio"]:checked + .radio {
+.label-filters input[type="radio"]:checked + .radio::after {
+    content: " ";
     position: absolute;
     top: 0;
     left: 0;
@@ -1817,28 +1845,26 @@ a {
     background-repeat: no-repeat;
 }
 
-.label-filters input[type="radio"]:disabled + .radio,
-.label-filters input[type="radio"]:disabled:hover + .radio {
+.label-filters input[type="radio"]:disabled + .radio::before,
+.label-filters input[type="radio"]:disabled:hover + .radio::before {
     background-image: url(../img/radio-off.svg);
-    opacity: 0.3;
+}
+
+.label-filters input[type="radio"]:checked:disabled + .radio::after,
+.label-filters input[type="radio"]:checked:disabled:hover + .radio::after {
+    background-image: url(../img/radio-on.svg);
 }
 
 .label-filters input[type="radio"]:checked:disabled + .radio,
-.label-filters input[type="radio"]:checked:disabled:hover + .radio {
-    background-image: url(../img/radio-on.svg);
-    opacity: 0.3;
-}
-
-.label-filters input[type="radio"]:checked:disabled + .radio + b,
-.label-filters input[type="radio"]:disabled + .radio + b {
+.label-filters input[type="radio"]:disabled + .radio {
     opacity: 0.4;
 }
 
-.label-filters input[type="radio"] + .radio:hover {
+.label-filters input[type="radio"] + .radio:hover::before {
     background-image: url(../img/radio-off-hover.svg);    
 }
 
-.label-filters input[type="radio"]:checked + .radio:hover {
+.label-filters input[type="radio"]:checked + .radio:hover::after {
     background-image: url(../img/radio-on-hover.svg);
 }
 
