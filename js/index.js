@@ -5,12 +5,12 @@ var write = document.querySelector(".btn-site-contacts"),
     popup_map = document.querySelector(".modal-map"),
     close_map = document.querySelector(".modal-close-map"),
     link_def = document.querySelectorAll(".services-item > a"),
-    delivery = document.querySelector(".delivery") 
+    delivery = document.querySelector(".delivery"), 
     guarantee = document.querySelector(".guarantee"),
     credit = document.querySelector(".credit"), 
     bgc = document.querySelector(".delivery-link");
 
-    
+                                // Слайдер Сервисы
     for (i=0; i<=link_def.length-1; i++) {
         link_def[i].addEventListener("click", function(evt) {
             evt.preventDefault();   
@@ -36,7 +36,6 @@ var write = document.querySelector(".btn-site-contacts"),
         guarantee.classList.add("vissually-hidden");
         bgc.classList.remove("delivery-link");
     });
-
 
                                 // Напишите нам
     write.addEventListener("click", function (evt) {
